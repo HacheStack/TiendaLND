@@ -79,9 +79,9 @@ header {
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
+.header__logo h1 {
+  font-family: var(--display); font-style: italic; font-size: clamp(1.5rem,3vw,2rem);
+  color: var(--dorado); text-shadow: 0 0 20px rgba(204,171,24,0.4);
 }
 
 header .logo img {
@@ -153,6 +153,16 @@ nav a:hover {
 .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--texto-s);
+}
+
+/* =============================================
+   IMAGEN LOGO EN EL HERO
+============================================= */
+.hero img {
+    width: 500px;        
+    max-width: 85%;      
+    height: auto;
+    margin: 0 auto 1.5rem; /* centra horizontalmente + espacio bajo la imagen */
 }
 
 /* =============================================
@@ -526,6 +536,101 @@ footer p {
     font-size: 0.82rem;
     color: var(--texto-t);
     line-height: 1.8;
+}
+
+/* =============================================
+   CARRUSEL DE NOVEDADES (footer)
+============================================= */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.carrusel {
+  overflow: hidden;
+  margin-top: 0.75rem;
+  /* Difumina los bordes para un efecto de entrada/salida suave */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+.carrusel__pista {
+  display: flex;
+  gap: 8px;
+  width: max-content;          
+  animation: marquee 22s linear infinite;
+}
+
+/* Se pausa al hacer hover */
+.carrusel:hover .carrusel__pista {
+  animation-play-state: paused;
+}
+
+.carrusel__pista img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  border: 1px solid var(--borde-r);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.carrusel__pista img:hover {
+  transform: scale(1.08);
+  border-color: var(--dorado);
+}
+
+/* =============================================
+   ICONOS REDES SOCIALES (footer)
+============================================= */
+.footer-rrss {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.footer-rrss a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--borde-r);
+  background: var(--surf2);
+  color: var(--texto-s);
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.footer-rrss a:hover {
+  background: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo-cl);
+  transform: translateY(-3px);
+}
+/* Evita que el grid desborde */
+footer > div {
+  min-width: 0;
+}
+
+/* Da más espacio a la columna de Novedades */
+footer > div:nth-child(3) {
+  grid-column: span 2;
 }
 
 /* =============================================
