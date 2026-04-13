@@ -2,7 +2,7 @@
    detalle.js
 ============================================= */
 
-
+const catalogo = [
   {
     id:          "kind-of-blue",
     titulo:      "Kind of Blue",
