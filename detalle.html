@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hache's Records | Detalle del disco</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos compartidos con index.html -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Estilos exclusivos de esta página -->
+  <link rel="stylesheet" href="assets/css/detalle.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="header__logo">
+      <h1>Hache's Records</h1>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-arrow-left"></i> Volver al catálogo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── DETALLE DEL DISCO ── -->
+  <main class="detalle-main">
+    <div class="detalle-layout">
+
+      <!-- Portada -->
+      <div class="detalle__portada">
+        <img id="detalle-img" src="" alt="">
+      </div>
+
+      <!-- Información -->
+      <div class="detalle__info">
+        <p class="detalle__artista" id="detalle-artista"></p>
+        <h2 class="detalle__titulo"  id="detalle-titulo"></h2>
+        <div class="detalle__meta">
+          <span class="detalle__estado" id="detalle-estado"></span>
+          <span class="detalle__precio" id="detalle-precio"></span>
+        </div>
+        <p class="detalle__descripcion" id="detalle-descripcion"></p>
+        <div class="detalle__acciones">
+          <button class="btn-comprar" id="btn-comprar">
+            <i class="fa fa-shopping-cart"></i> Añadir al carrito
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── MODAL: CARRITO ── -->
+  <div class="modal-overlay" id="modal-carrito" role="dialog" aria-modal="true" aria-label="Carrito de compra">
+    <div class="modal">
+      <button class="modal__cerrar" id="btn-cerrar-carrito" aria-label="Cerrar">
+        <i class="fa fa-times"></i>
+      </button>
+      <h2 class="modal__titulo"><i class="fa fa-shopping-cart"></i> Tu carrito</h2>
+      <div class="modal__item">
+        <img id="modal-img" src="" alt="">
+        <div class="modal__item-info">
+          <p class="modal__item-nombre" id="modal-nombre"></p>
+          <p class="modal__item-artista" id="modal-artista"></p>
+          <p class="modal__item-precio" id="modal-precio"></p>
+        </div>
+      </div>
+      <div class="modal__separador"></div>
+      <div class="modal__total">
+        <span>Total</span>
+        <span id="modal-total"></span>
+      </div>
+      <button class="btn-pagar" id="btn-pagar">
+        <i class="fa fa-lock"></i> Proceder al pago
+      </button>
+    </div>
+  </div>
+
+  <!-- ── MODAL: PASARELA EN MANTENIMIENTO ── -->
+  <div class="modal-overlay" id="modal-pago" role="dialog" aria-modal="true" aria-label="Pasarela de pago">
+    <div class="modal modal--mantenimiento">
+      <button class="modal__cerrar" id="btn-cerrar-pago" aria-label="Cerrar">
+        <i class="fa fa-times"></i>
+      </button>
+      <i class="fa fa-tools modal__icono"></i>
+      <h2 class="modal__titulo">Pasarela en mantenimiento</h2>
+      <p class="modal__texto">
+        Estamos mejorando nuestro sistema de pagos.<br>
+        Disculpa las molestias — pronto podrás completar tu compra.
+      </p>
+      <button class="btn-volver" id="btn-volver">
+        <i class="fa fa-arrow-left"></i> Volver al carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contacto">
+    <div>
+      <h3>Contacto</h3>
+      <p>contact@hachesrecords.com<br>+34 600 000 000</p>
+    </div>
+    <div>
+      <h3>Redes sociales</h3>
+      <div class="footer-rrss">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3>Hache's Records</h3>
+      <p>© 2026 Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/detalle.js"></script>
+</body>
+</html>
