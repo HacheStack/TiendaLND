@@ -1,0 +1,308 @@
+/* =============================================
+   HACHE'S RECORDS — detalle.css
+   Estilos exclusivos de detalle.html
+   Requiere que style.css esté cargado antes
+============================================= */
+
+/* ── Layout principal ── */
+.detalle-main {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+}
+
+.detalle-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+
+/* ── Portada ── */
+.detalle__portada img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--borde-r);
+  box-shadow: 0 12px 40px rgba(171, 55, 32, 0.30);
+}
+
+/* ── Bloque de información ── */
+.detalle__artista {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dorado);
+  margin-bottom: 0.4rem;
+}
+
+.detalle__titulo {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--texto);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.detalle__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+.detalle__estado {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texto-t);
+  background: var(--surf2);
+  border: 1px solid var(--borde-r);
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+}
+
+.detalle__precio {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--rojo-cl);
+  font-family: var(--display);
+}
+
+.detalle__descripcion {
+  font-size: 0.95rem;
+  color: var(--texto-s);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+/* ── Botón comprar ── */
+.detalle__acciones {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-comprar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background: var(--rojo);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(171, 55, 32, 0.35);
+}
+
+.btn-comprar:hover {
+  background: var(--rojo-cl);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(171, 55, 32, 0.45);
+}
+
+/* ══════════════════════════════════════════
+   MODALES
+══════════════════════════════════════════ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.activo {
+  display: flex;
+}
+
+.modal {
+  background: var(--surf);
+  border: 1px solid var(--borde-r);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.25s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal__cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--texto-t);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal__cerrar:hover { color: var(--dorado); }
+
+.modal__titulo {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--dorado);
+  margin-bottom: 1.5rem;
+}
+
+.modal__titulo i { margin-right: 0.5rem; }
+
+/* Item en el carrito */
+.modal__item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--surf2);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal__item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.modal__item-nombre {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--texto);
+  margin-bottom: 0.2rem;
+}
+
+.modal__item-artista {
+  font-size: 0.78rem;
+  color: var(--dorado);
+  margin-bottom: 0.3rem;
+}
+
+.modal__item-precio {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rojo-cl);
+}
+
+.modal__separador {
+  height: 1px;
+  background: var(--borde);
+  margin-bottom: 1rem;
+}
+
+.modal__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--texto-s);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.modal__total span:last-child {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rojo-cl);
+}
+
+/* Botón pagar */
+.btn-pagar {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--dorado);
+  color: var(--bg);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-pagar:hover {
+  background: var(--dorado-cl, #e0bf30);
+  transform: translateY(-2px);
+}
+
+/* Modal mantenimiento */
+.modal--mantenimiento {
+  text-align: center;
+}
+
+.modal__icono {
+  font-size: 3rem;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.modal__texto {
+  font-size: 0.9rem;
+  color: var(--texto-s);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón volver al carrito */
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--surf3);
+  color: var(--texto-s);
+  border: 1px solid var(--borde-r);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-volver:hover {
+  background: var(--surf2);
+  color: var(--dorado);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .detalle-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle__portada img {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+}

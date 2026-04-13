@@ -159,8 +159,8 @@ nav a:hover {
    IMAGEN LOGO EN EL HERO
 ============================================= */
 .hero img {
-    width: 500px;        
-    max-width: 85%;      
+    width: 400px;        
+    max-width: 75%;      
     height: auto;
     margin: 0 auto 1.5rem; /* centra horizontalmente + espacio bajo la imagen */
 }
