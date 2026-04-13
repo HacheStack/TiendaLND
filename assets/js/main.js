@@ -157,7 +157,6 @@ audio.addEventListener("ended", function () {
     playSong();
 });
 
-/* Botones Play Sample del catálogo */
 sampleBtns.forEach((btn, index) => {
     btn.addEventListener("click", function () {
         if (player.classList.contains("playing") && currentIndex === index) {
@@ -166,11 +165,7 @@ sampleBtns.forEach((btn, index) => {
             if (player.classList.contains("playing")) pauseSong();
             loadSong(index);
             playSong();
-
-            document.getElementById("jukebox").scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
-            });
+           
         }
     });
 });
