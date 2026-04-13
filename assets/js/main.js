@@ -178,3 +178,23 @@ sampleBtns.forEach((btn, index) => {
 /* Estado inicial */
 loadSong(0);
 
+/* ── Menú hamburguesa ── */
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu   = document.querySelector('header nav');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', function () {
+    const abierto = navMenu.classList.toggle('abierto');
+    navToggle.classList.toggle('abierto');
+    navToggle.setAttribute('aria-expanded', abierto);
+  });
+
+  /* Cierra el menú al pulsar un enlace */
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function () {
+      navMenu.classList.remove('abierto');
+      navToggle.classList.remove('abierto');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
