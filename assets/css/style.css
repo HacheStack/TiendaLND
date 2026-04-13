@@ -334,7 +334,7 @@ nav a:hover {
 }
 
 /* =============================================
-   PLAYER
+   JUKEBOX
 ============================================= */
 @keyframes rotation {
     from { transform: rotate(0deg); }
@@ -628,7 +628,7 @@ footer > div {
   min-width: 0;
 }
 
-/* Da más espacio a la columna de Novedades */
+/* Espacio a la columna de Novedades */
 footer > div:nth-child(3) {
   grid-column: span 2;
 }
