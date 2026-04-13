@@ -671,7 +671,6 @@ footer > div:nth-child(3) {
    MENÚ HAMBURGUESA (móvil)
 ============================================= */
 
-/* El botón solo se ve en móvil */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -682,6 +681,7 @@ footer > div:nth-child(3) {
   padding: 4px;
   cursor: pointer;
   z-index: 101;
+  flex-shrink: 0;
 }
 
 .nav-toggle span {
@@ -695,54 +695,54 @@ footer > div:nth-child(3) {
 
 .nav-toggle:hover span { background: var(--dorado); }
 
-/* Animación X al abrir */
 .nav-toggle.abierto span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.abierto span:nth-child(2) { opacity: 0; }
 .nav-toggle.abierto span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 700px) {
+  /* Mostrar botón hamburguesa */
   .nav-toggle {
     display: flex;
   }
 
-  /* El nav se oculta por defecto */
-  header nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--surf);
-    border-bottom: 1px solid var(--borde-r);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem;
-    z-index: 99;
+  /* Header permite que el nav envuelva a la siguiente línea */
+  header {
+    flex-wrap: wrap;
+    padding-bottom: 0;
   }
 
-  /* Al abrir */
-  header nav.abierto {
+  /* Nav oculto por defecto, ocupa toda la línea cuando aparece */
+  header nav:not(.nav-back) {
+    display: none;
+    width: 100%;
+    background: var(--surf2);
+    border-top: 1px solid var(--borde-r);
+    padding: 0.5rem 0;
+    order: 3;
+  }
+
+  header nav:not(.nav-back).abierto {
     display: block;
   }
 
-  header nav ul {
+  header nav:not(.nav-back) ul {
     flex-direction: column;
     gap: 0;
   }
 
-  header nav ul li a {
+  header nav:not(.nav-back) ul li a {
     display: block;
-    padding: 0.75rem 0;
+    padding: 0.75rem 1rem;
     border-bottom: 1px solid var(--borde);
     font-size: 0.9rem;
   }
 
-  header nav ul li:last-child a {
+  header nav:not(.nav-back) ul li:last-child a {
     border-bottom: none;
   }
 
-  /* Header en posición relativa para que el nav absoluto se ancle bien */
-  header {
-    position: sticky;
-    position: -webkit-sticky;
+  /* nav-back: el enlace de "Volver" en detalle.html SIEMPRE visible */
+  header nav.nav-back {
+    display: flex !important;
   }
 }
