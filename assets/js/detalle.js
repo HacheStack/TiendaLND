@@ -1,23 +1,8 @@
 /* =============================================
-   HACHE'S RECORDS — detalle.js
-   Cargado desde: assets/js/detalle.js
-
-   Flujo:
-     1. Lee el parámetro ?id=N de la URL
-     2. Busca el disco en el array `catalogo`
-     3. Rellena el HTML con sus datos
-     4. Gestiona el modal de carrito y la pasarela simulada
-
-   Cuando el catálogo venga de un XML, solo hay que
-   sustituir el array `catalogo` por la lectura del XML.
-   El resto del código no cambia.
+   detalle.js
 ============================================= */
 
-/* ── Datos del catálogo ─────────────────────────────────────────────
-   Misma estructura que main.js.
-   Cuando llegue el XML, este array se generará leyendo el fichero.
-   ─────────────────────────────────────────────────────────────────── */
-const catalogo = [
+
   {
     id:          "kind-of-blue",
     titulo:      "Kind of Blue",
