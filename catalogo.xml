@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogo.xsl"?>
+<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+<!--
+    catalogo.xml — Hache's Records
+    Catálogo de vinilos de segunda mano.
+    Validado con catalogo.dtd
+-->
+<catalogo>
+
+  <disco id="kind-of-blue">
+    <titulo>Kind of Blue</titulo>
+    <artista>Miles Davis</artista>
+    <anio>1959</anio>
+    <genero>Jazz</genero>
+    <estado>VG+</estado>
+    <precio>18</precio>
+    <descripcion>Considerado el disco de jazz más vendido de todos los tiempos. Grabado en 1959, Kind of Blue definió el jazz modal con improvisaciones atemporales que siguen sonando igual de frescas hoy.</descripcion>
+  </disco>
+
+  <disco id="abbey-road">
+    <titulo>Abbey Road</titulo>
+    <artista>The Beatles</artista>
+    <anio>1969</anio>
+    <genero>Rock</genero>
+    <estado>Mint</estado>
+    <precio>25</precio>
+    <descripcion>El penúltimo álbum de The Beatles, publicado en 1969. Contiene algunas de sus canciones más memorables y el célebre medley del lado B. Un cierre de época hecho obra de arte.</descripcion>
+  </disco>
+
+  <disco id="rumours">
+    <titulo>Rumours</titulo>
+    <artista>Fleetwood Mac</artista>
+    <anio>1977</anio>
+    <genero>Rock</genero>
+    <estado>VG</estado>
+    <precio>14</precio>
+    <descripcion>Grabado en plena crisis personal de todos sus miembros en 1977. Uno de los álbumes de rock más vendidos de la historia, con clásicos como Go Your Own Way y The Chain.</descripcion>
+  </disco>
+
+  <disco id="blue-train">
+    <titulo>Blue Train</titulo>
+    <artista>John Coltrane</artista>
+    <anio>1958</anio>
+    <genero>Jazz</genero>
+    <estado>VG+</estado>
+    <precio>20</precio>
+    <descripcion>La única grabación de Coltrane para Blue Note Records (1958). Considerado uno de los pilares del hard bop, Blue Train muestra a un Coltrane en plena madurez creativa.</descripcion>
+  </disco>
+
+  <disco id="dark-side-of-the-moon">
+    <titulo>The Dark Side of the Moon</titulo>
+    <artista>Pink Floyd</artista>
+    <anio>1973</anio>
+    <genero>Rock</genero>
+    <estado>Mint</estado>
+    <precio>30</precio>
+    <descripcion>Publicado en 1973, permaneció en las listas del Billboard durante más de 950 semanas. Una obra maestra del rock progresivo que explora el tiempo, la avaricia y la locura.</descripcion>
+  </disco>
+
+  <disco id="back-to-black">
+    <titulo>Back to Black</titulo>
+    <artista>Amy Winehouse</artista>
+    <anio>2006</anio>
+    <genero>Soul</genero>
+    <estado>VG+</estado>
+    <precio>16</precio>
+    <descripcion>El segundo y último álbum de estudio de Amy Winehouse (2006). Ganador de cinco premios Grammy, fusiona soul, R&amp;B y sonidos Motown con una voz y una honestidad emocional únicas.</descripcion>
+  </disco>
+
+  <disco id="nevermind">
+    <titulo>Nevermind</titulo>
+    <artista>Nirvana</artista>
+    <anio>1991</anio>
+    <genero>Grunge</genero>
+    <estado>VG+</estado>
+    <precio>22</precio>
+    <descripcion>El segundo álbum de Nirvana (1991) que catapultó el grunge al mainstream mundial. Smells Like Teen Spirit se convirtió en himno de una generación entera.</descripcion>
+  </disco>
+
+  <disco id="thriller">
+    <titulo>Thriller</titulo>
+    <artista>Michael Jackson</artista>
+    <anio>1982</anio>
+    <genero>Pop</genero>
+    <estado>Mint</estado>
+    <precio>28</precio>
+    <descripcion>El álbum más vendido de la historia con más de 70 millones de copias. Publicado en 1982, contiene siete sencillos que llegaron al top 10, producidos por Quincy Jones.</descripcion>
+  </disco>
+
+  <disco id="born-to-run">
+    <titulo>Born to Run</titulo>
+    <artista>Bruce Springsteen</artista>
+    <anio>1975</anio>
+    <genero>Rock</genero>
+    <estado>VG</estado>
+    <precio>19</precio>
+    <descripcion>Tercer álbum de Springsteen (1975), considerado uno de los mejores discos de rock de todos los tiempos. Épico, cinematográfico e inmortal.</descripcion>
+  </disco>
+
+</catalogo>

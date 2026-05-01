@@ -1,0 +1,20 @@
+<!-- =============================================
+     catalogo.dtd — Hache's Records
+     Definición de tipo de documento para el
+     catálogo de vinilos en formato XML.
+============================================= -->
+
+<!ELEMENT catalogo (disco+)>
+
+<!ELEMENT disco (titulo, artista, anio, genero, estado, precio, descripcion)>
+<!ATTLIST disco
+    id ID #REQUIRED
+>
+
+<!ELEMENT titulo      (#PCDATA)>
+<!ELEMENT artista     (#PCDATA)>
+<!ELEMENT anio        (#PCDATA)>
+<!ELEMENT genero      (#PCDATA)>
+<!ELEMENT estado      (#PCDATA)>
+<!ELEMENT precio      (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>

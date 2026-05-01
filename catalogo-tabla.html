@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo XML — Hache's Records</title>
+<link rel="stylesheet" href="assets/css/tabla.css">
+</head>
+<body>
+<header><div class="header__logo"><h1>Hache's Records</h1></div>
+<a class="btn-volver" href="index.html">← Volver a la tienda</a></header><section class="hero"><h2>Catálogo de Vinilos</h2>
+<p>
+          Listado completo generado desde XML mediante transformación XSLT •
+          9 referencias disponibles
+        </p></section><main class="contenedor"><section class="seccion"><h2 class="seccion-titulo">Resumen del catálogo</h2>
+<div class="xpath-note">
+            XPath: sum(//precio) | count(//disco) | sum(//precio) div count(//disco) | count(//disco[estado='Mint'])
+          </div>
+<div class="stats-grid">
+<div class="stat-card">
+<span class="stat-valor">9</span><span class="stat-label">Discos en catálogo</span>
+</div>
+<div class="stat-card">
+<span class="stat-valor">192 €
+              </span><span class="stat-label">Valor total del catálogo</span>
+</div>
+<div class="stat-card">
+<span class="stat-valor">21.33 €
+              </span><span class="stat-label">Precio medio</span>
+</div>
+<div class="stat-card">
+<span class="stat-valor">3</span><span class="stat-label">Discos en estado Mint</span>
+</div>
+<div class="stat-card">
+<span class="stat-valor">30 €
+              </span><span class="stat-label">Precio más alto</span>
+</div>
+<div class="stat-card">
+<span class="stat-valor">14 €
+              </span><span class="stat-label">Precio más bajo</span>
+</div>
+</div></section><section class="seccion"><h2 class="seccion-titulo">Catálogo completo</h2>
+<div class="xpath-note">
+            XPath: xsl:sort select="numero(precio)" data-type="number" order="ascending"
+          </div>
+<div class="tabla-wrapper"><table>
+<thead><tr>
+<th>#</th>
+<th>Título</th>
+<th>Artista</th>
+<th>Año</th>
+<th>Género</th>
+<th>Estado</th>
+<th>Precio</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-num">1</td>
+<td class="td-titulo">Rumours</td>
+<td>Fleetwood Mac</td>
+<td class="td-num">1977</td>
+<td>Rock</td>
+<td><span class="badge badge-vg">VG</span></td>
+<td class="td-precio">14 €</td>
+</tr>
+<tr>
+<td class="td-num">2</td>
+<td class="td-titulo">Back to Black</td>
+<td>Amy Winehouse</td>
+<td class="td-num">2006</td>
+<td>Soul</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">16 €</td>
+</tr>
+<tr>
+<td class="td-num">3</td>
+<td class="td-titulo">Kind of Blue</td>
+<td>Miles Davis</td>
+<td class="td-num">1959</td>
+<td>Jazz</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">18 €</td>
+</tr>
+<tr>
+<td class="td-num">4</td>
+<td class="td-titulo">Born to Run</td>
+<td>Bruce Springsteen</td>
+<td class="td-num">1975</td>
+<td>Rock</td>
+<td><span class="badge badge-vg">VG</span></td>
+<td class="td-precio">19 €</td>
+</tr>
+<tr>
+<td class="td-num">5</td>
+<td class="td-titulo">Blue Train</td>
+<td>John Coltrane</td>
+<td class="td-num">1958</td>
+<td>Jazz</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">20 €</td>
+</tr>
+<tr>
+<td class="td-num">6</td>
+<td class="td-titulo">Nevermind</td>
+<td>Nirvana</td>
+<td class="td-num">1991</td>
+<td>Grunge</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">22 €</td>
+</tr>
+<tr>
+<td class="td-num">7</td>
+<td class="td-titulo">Abbey Road</td>
+<td>The Beatles</td>
+<td class="td-num">1969</td>
+<td>Rock</td>
+<td><span class="badge badge-mint">Mint</span></td>
+<td class="td-precio">25 €</td>
+</tr>
+<tr>
+<td class="td-num">8</td>
+<td class="td-titulo">Thriller</td>
+<td>Michael Jackson</td>
+<td class="td-num">1982</td>
+<td>Pop</td>
+<td><span class="badge badge-mint">Mint</span></td>
+<td class="td-precio">28 €</td>
+</tr>
+<tr>
+<td class="td-num">9</td>
+<td class="td-titulo">The Dark Side of the Moon</td>
+<td>Pink Floyd</td>
+<td class="td-num">1973</td>
+<td>Rock</td>
+<td><span class="badge badge-mint">Mint</span></td>
+<td class="td-precio">30 €</td>
+</tr>
+</tbody>
+</table></div></section><section class="seccion"><h2 class="seccion-titulo">
+            Selección Mint
+            (3 discos)
+          </h2>
+<div class="xpath-note">
+            XPath: //disco[estado='Mint'] | xsl:sort select="anio" order="ascending"
+          </div>
+<div class="tabla-wrapper"><table class="tabla-mini">
+<thead><tr>
+<th>Título</th>
+<th>Artista</th>
+<th>Año</th>
+<th>Precio</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-titulo">Abbey Road</td>
+<td>The Beatles</td>
+<td class="td-num">1969</td>
+<td class="td-precio">25 €</td>
+</tr>
+<tr>
+<td class="td-titulo">The Dark Side of the Moon</td>
+<td>Pink Floyd</td>
+<td class="td-num">1973</td>
+<td class="td-precio">30 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Thriller</td>
+<td>Michael Jackson</td>
+<td class="td-num">1982</td>
+<td class="td-precio">28 €</td>
+</tr>
+</tbody>
+</table></div></section><section class="seccion"><h2 class="seccion-titulo">Sección Jazz</h2>
+<div class="xpath-note">
+            XPath: //disco[genero='Jazz'] | format-number(count div total * 100, '##.0') | sum(//disco[genero='Jazz']/precio)
+          </div>
+<div class="tabla-wrapper"><table class="tabla-mini">
+<thead><tr>
+<th>Título</th>
+<th>Artista</th>
+<th>Año</th>
+<th>Estado</th>
+<th>Precio</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-titulo">Blue Train</td>
+<td>John Coltrane</td>
+<td class="td-num">1958</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">20 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Kind of Blue</td>
+<td>Miles Davis</td>
+<td class="td-num">1959</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">18 €</td>
+</tr>
+</tbody>
+</table></div>
+<p style="margin-top:1rem; font-size:0.85rem; color:var(--texto-t);">
+            Discos de Jazz en catálogo:
+            <strong style="color:var(--dorado)">2</strong>
+             • 
+            Valor total Jazz:
+            <strong style="color:#e0824e">38 €
+            </strong>
+             • 
+            Representan el
+            <strong style="color:var(--dorado)">22.2%
+            </strong>
+            del catálogo
+          </p></section><section class="seccion"><h2 class="seccion-titulo">Clásicos anteriores a 1980</h2>
+<div class="xpath-note">
+            XPath: //disco[number(anio) &lt; 1980] | xsl:sort select="anio" order="descending"
+          </div>
+<div class="tabla-wrapper"><table class="tabla-mini">
+<thead><tr>
+<th>Título</th>
+<th>Artista</th>
+<th>Año</th>
+<th>Género</th>
+<th>Estado</th>
+<th>Precio</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-titulo">Rumours</td>
+<td>Fleetwood Mac</td>
+<td class="td-num">1977</td>
+<td>Rock</td>
+<td><span class="badge badge-vg">VG</span></td>
+<td class="td-precio">14 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Born to Run</td>
+<td>Bruce Springsteen</td>
+<td class="td-num">1975</td>
+<td>Rock</td>
+<td><span class="badge badge-vg">VG</span></td>
+<td class="td-precio">19 €</td>
+</tr>
+<tr>
+<td class="td-titulo">The Dark Side of the Moon</td>
+<td>Pink Floyd</td>
+<td class="td-num">1973</td>
+<td>Rock</td>
+<td><span class="badge badge-mint">Mint</span></td>
+<td class="td-precio">30 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Abbey Road</td>
+<td>The Beatles</td>
+<td class="td-num">1969</td>
+<td>Rock</td>
+<td><span class="badge badge-mint">Mint</span></td>
+<td class="td-precio">25 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Kind of Blue</td>
+<td>Miles Davis</td>
+<td class="td-num">1959</td>
+<td>Jazz</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">18 €</td>
+</tr>
+<tr>
+<td class="td-titulo">Blue Train</td>
+<td>John Coltrane</td>
+<td class="td-num">1958</td>
+<td>Jazz</td>
+<td><span class="badge badge-vgp">VG+</span></td>
+<td class="td-precio">20 €</td>
+</tr>
+</tbody>
+</table></div></section></main><footer><p>
+          Hache's Records © 2026  • 
+          Catálogo generado mediante transformación XSLT desde
+          <a href="catalogo.xml">catalogo.xml</a>  • 
+          <a href="index.html">Volver a la tienda</a></p></footer>
+</body>
+</html>
