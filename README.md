@@ -2,15 +2,15 @@
 
 Proyecto académico desarrollado para la asignatura de **Lenguaje de Marcas**.
 
-Se trata de una **tienda web de vinilos de segunda mano**, desarrollada como una página estática utilizando **HTML, CSS y JavaScript vanilla**.
+Se trata de una **tienda web de vinilos de segunda mano**, desarrollada como una página estática utilizando **HTML, CSS y JavaScript vanilla**, ampliada con una sección de catálogo generada mediante transformación **XML + XSLT**.
 
 🔗 **Web desplegada:**
-https://viniloslnd.bluecrab615.workers.dev/
+[https://viniloslnd.bluecrab615.workers.dev/](https://viniloslnd.bluecrab615.workers.dev/)
 
 🔗 **Repositorio:**
-https://github.com/HacheStack/TiendaLND
+[https://github.com/HacheStack/TiendaLND](https://github.com/HacheStack/TiendaLND)
 
----
+***
 
 ## 📌 Características
 
@@ -20,18 +20,22 @@ https://github.com/HacheStack/TiendaLND
 * Diseño responsive
 * Menú hamburguesa para dispositivos móviles
 * Navegación entre páginas HTML enlazadas
+* Catálogo XML con transformación XSLT y consultas XPath avanzadas
 
----
+***
 
 ## 🛠️ Tecnologías utilizadas
 
 * HTML5
 * CSS3
-* JavaScript
+* JavaScript (vanilla)
+* XML + DTD
+* XSLT 1.0
+* Python (lxml) — transformación XML → HTML
 * Cloudflare Pages / Workers
 * GitHub
 
----
+***
 
 ## 📁 Estructura del proyecto
 
@@ -39,27 +43,27 @@ https://github.com/HacheStack/TiendaLND
 TiendaLND/
 ├── index.html
 ├── detalle.html
+├── catalogo-tabla.html
+├── transformar.py
 ├── pages/
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── img/
-│   ├── audio/
-│   └── fonts/
+├── xml/
+│   ├── catalogo.xml
+│   ├── catalogo.dtd
+│   └── catalogo.xsl
+└── assets/
+    ├── css/
+    │   ├── style.css
+    │   ├── detalle.css
+    │   └── tabla.css
+    ├── js/
+    │   ├── main.js
+    │   └── detalle.js
+    ├── img/
+    ├── audio/
+    └── fonts/
 ```
 
----
-
-## 🎓 Finalidad
-
-Este proyecto ha sido desarrollado con fines académicos como práctica final de la asignatura **Lenguaje de Marcas**.
-
----
-
-## Próximas mejoras
-
-- [ ] Catálogo generado dinámicamente desde XML
-- [ ] Pasarela de pago funcional
+***
 
 ## 👤 Autor
 
